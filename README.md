@@ -1023,11 +1023,11 @@ b. 查找路径：targets -> Build Settings -> Other Linker Flags
 
 > <font color=red>000</font>xxx，<font color=red>11/12/13/59</font>xxxx
 >
-> 见 容联状态码
+> 见 [容联状态码](./容联状态码.md)
 
 
 
 > <font color=red>其他</font>，见
 >
-> 运营商状态码
+> [运营商状态码](./运营商状态码.md)
 
