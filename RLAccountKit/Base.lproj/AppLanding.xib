@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Pmb-PZ-U8Q">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ccop_one_login_logo" translatesAutoresizingMaskIntoConstraints="NO" id="0ER-rj-7b3" userLabel="landing_logo">
+                    <rect key="frame" x="127" y="151" width="160" height="160"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="160" id="7kj-AQ-gin"/>
+                        <constraint firstAttribute="width" constant="160" id="fDf-4W-DDw"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ccop_one_login_title" translatesAutoresizingMaskIntoConstraints="NO" id="1PY-U0-1il" userLabel="landing_title">
+                    <rect key="frame" x="87" y="411" width="240" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="5l5-hW-4j2"/>
+                        <constraint firstAttribute="width" constant="240" id="p23-No-h93"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="0ER-rj-7b3" firstAttribute="top" secondItem="Pmb-PZ-U8Q" secondAttribute="top" constant="151" id="SoR-5g-nIl"/>
+                <constraint firstItem="0ER-rj-7b3" firstAttribute="centerX" secondItem="g7F-6O-bdy" secondAttribute="centerX" id="VIa-8p-ddM"/>
+                <constraint firstItem="1PY-U0-1il" firstAttribute="centerX" secondItem="0ER-rj-7b3" secondAttribute="centerX" id="gK2-Uf-O7t"/>
+                <constraint firstItem="1PY-U0-1il" firstAttribute="top" secondItem="0ER-rj-7b3" secondAttribute="bottom" constant="100" id="t2B-0M-Bf5"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="g7F-6O-bdy"/>
+            <point key="canvasLocation" x="806" y="-350"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ccop_one_login_logo" width="80" height="80"/>
+        <image name="ccop_one_login_title" width="180" height="45"/>
+    </resources>
+</document>
