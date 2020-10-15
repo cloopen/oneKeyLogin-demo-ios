@@ -10,7 +10,7 @@
 
 ## 二. Demo快速体验
 
-**克隆/下载本项目到本地，然后执行 ```pod install``` 下载第三方依赖库。**
+**克隆/下载本项目到本地，进入Demo目录，在此目录中打开终端，然后执行 ```pod install``` 下载第三方依赖库。**
 
 > **注：**确保已在容联开通并申请了一键登录服务，获取到了相应的AppID。
 
@@ -47,11 +47,11 @@ SDK包含一键登录和本机号码校验两个不同的功能，使用场景�
 
 支持的iOS版本：9.0+
 
-SDK在主目录下的 **RLVerification** 文件夹中，解压后包含3个文件(夹)是：
+SDK在主目录下的 **SDK** 文件夹中，解压后包含3个文件(夹)是：
 
-- RLVerification.framework
-- MobileSupportSDK
 - Bundle
+- MobileSupportSDK
+- RLVerification.framework
 
 
 
@@ -65,7 +65,7 @@ SDK在主目录下的 **RLVerification** 文件夹中，解压后包含3个文�
 #### （1）引入文件
 
 步骤：将RLVerification文件夹（包含RLVerification.framework、MobileSupportSDK、Bundle三个子文件）拖入自己的项目目录里，弹出的窗口选择“Copy items if needed”，“Create groups”，“Add to targets”选择你的目标工程。
-![ChooseoptionsForAddingTheseFiles.jpg](./Document/imgs/addingFiles.jpg)
+![ChooseoptionsForAddingTheseFiles.jpg](https://github.com/cloopen/Images/blob/main/iOS/addingFiles.jpg)
 
 #### （2）添加静态库
 
@@ -73,12 +73,12 @@ SDK在主目录下的 **RLVerification** 文件夹中，解压后包含3个文�
 
 步骤：点击工程项目，点击目标TARGETS，选择Build Phases，展开Link Binary With Libraries，查看是否存在这四个文件）
 
-![framework.jpg](./Document/imgs/linkBinaryFramework.jpg)
+![framework.jpg](https://github.com/cloopen/Images/blob/main/iOS/linkBinaryFramework.jpg)
 
 
 
 如果没有，则需要手动添加（展开添加的SDK文件夹MobileSupportSDK，将其中的framework文件直接拖入即可）
-![手动链接RL一键登录库.jpg](./Document/imgs/linkBinaryFramwByHand.jpg)
+![手动链接RL一键登录库.jpg](https://github.com/cloopen/Images/blob/main/iOS/linkBinaryFramwByHand.jpg)
 
 #### （3）添加动态依赖库
 
@@ -86,14 +86,14 @@ SDK在主目录下的 **RLVerification** 文件夹中，解压后包含3个文�
 >
 >libc++.1.tbd
 
-![添加依赖库.jpg](./Document/imgs/linkBinaryLib.jpg)
+![添加依赖库.jpg](https://github.com/cloopen/Images/blob/main/iOS/linkBinaryLib.jpg)
 
 #### （4）添加资源文件
 
 添加Bundle文件夹下的几个bundle文件到工程里，否则⼀键登录授权⻚⾯默认的图⽚或icon将会显示不出来。
 
 步骤：点击工程项目，点击目标TARGETS，选择Build Phases，展开Copy Bundle Resources
-![资源文件.jpg](./Document/imgs/bundleRes.jpg)
+![资源文件.jpg](https://github.com/cloopen/Images/blob/main/iOS/bundleRes.jpg)
 
 #### （5）配置支持HTTP传输
 
@@ -116,14 +116,14 @@ SDK在主目录下的 **RLVerification** 文件夹中，解压后包含3个文�
 
 ​	最后更新配置文件即可使用
 
-![addSignWithAppleID](./Document/imgs/addSignWithAppleID.png)
+![addSignWithAppleID](https://github.com/cloopen/Images/blob/main/iOS/addSignWithAppleID.png)
 
 ### 1.3 编译配置
 
 **具体方法：**
 点击TARGETS(目标工程名)，点击“Build Settings”，搜索框内搜索Other Linker Flags，在“Other Linker Flags”选项后添加-ObjC，如果项目仍有问题，可以再添加-all_load。
 
-![动态库编译配置.jpg](./Document/imgs/otherLinkerFlag.jpg)
+![动态库编译配置.jpg](https://github.com/cloopen/Images/blob/main/iOS/otherLinkerFlag.jpg)
 
 
 
@@ -955,7 +955,7 @@ SDK在主目录下的 **RLVerification** 文件夹中，解压后包含3个文�
 
 **界面说明**
 
-![界面参考](./Document/imgs/ScreenExplain.png)
+![界面参考](https://github.com/cloopen/Images/blob/main/iOS/ScreenExplain.png)
 
 ## 七. 常见问题
 
