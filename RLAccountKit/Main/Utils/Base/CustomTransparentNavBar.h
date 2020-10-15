@@ -1,3 +1,0 @@
-@interface CustomTransparentNavBar : UINavigationBar
-
-@end

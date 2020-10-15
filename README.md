@@ -1,22 +1,14 @@
-# onekeylogin-ios-demo
-
-# 一. 概述
-
-​		容联云一键登录SDK 为移动应用提供完善的三网（移动、联通、电信）一键登录&号码验证功能开发框架，屏蔽其内部复杂细节，对外提供较为简洁的 API 接口，方便第三方应用快速集成一键登录功能。
+# 容联云·一键登录iOS_Demo
 
 
 
-SDK包含一键登录和本机号码校验两个不同的功能，使用场景不一样，无需一起使用。
+## 一. Demo概述
 
-- <font color=#57C3C0 size=3>一键登录服务必须打开蜂窝数据流量并且手机操作系统给予蜂窝数据权限才能使用</font>
-  1. 电信只支持4G网络取号
-  2. 移动, 联通支持4G, 3G, 2G网络取号，但在非4G网络情况下容易取号失败
-- <font color=#57C3C0 size=3>取号请求过程需要消耗用户少量数据流量(国外漫游时可能会产生额外的费用)</font>
-- <font color=#57C3C0 size=3>针对双卡双待手机只取当前流量卡号</font>
+此项目为容联云一键登录功能的体验Demo，其中包含 号码一键登录 和 号码验证功能。
 
 
 
-# 二. Demo快速体验
+## 二. Demo快速体验
 
 **克隆/下载本项目到本地，然后执行 ```pod install``` 下载第三方依赖库。**
 
@@ -32,14 +24,30 @@ SDK包含一键登录和本机号码校验两个不同的功能，使用场景�
 
 
 
+## 三. SDK概述
 
-# 三. 接入SDK的工作配置
+容联云一键登录SDK 为移动应用提供完善的三网（移动、联通、电信）一键登录&号码验证功能开发框架，屏蔽其内部复杂细节，对外提供较为简洁的 API 接口，方便第三方应用快速集成一键登录功能。
+
+
+
+SDK包含一键登录和本机号码校验两个不同的功能，使用场景不一样，无需一起使用。
+
+- <font color=#57C3C0 size=3>一键登录服务必须打开蜂窝数据流量并且手机操作系统给予蜂窝数据权限才能使用</font>
+  1. 电信只支持4G网络取号
+  2. 移动, 联通支持4G, 3G, 2G网络取号，但在非4G网络情况下容易取号失败
+- <font color=#57C3C0 size=3>取号请求过程需要消耗用户少量数据流量(国外漫游时可能会产生额外的费用)</font>
+- <font color=#57C3C0 size=3>针对双卡双待手机只取当前流量卡号</font>
+
+
+
+
+## 四. 接入SDK的工作配置
 
 当前版本：1.0.3
 
 支持的iOS版本：9.0+
 
-下载SDK后进行解压，解压后包含3个文件(夹)是：
+SDK在主目录下的 **RLVerification** 文件夹中，解压后包含3个文件(夹)是：
 
 - RLVerification.framework
 - MobileSupportSDK
@@ -57,7 +65,7 @@ SDK包含一键登录和本机号码校验两个不同的功能，使用场景�
 #### （1）引入文件
 
 步骤：将RLVerification文件夹（包含RLVerification.framework、MobileSupportSDK、Bundle三个子文件）拖入自己的项目目录里，弹出的窗口选择“Copy items if needed”，“Create groups”，“Add to targets”选择你的目标工程。
-![ChooseoptionsForAddingTheseFiles.jpg](./imgs/addingFiles.jpg)
+![ChooseoptionsForAddingTheseFiles.jpg](./Document/imgs/addingFiles.jpg)
 
 #### （2）添加静态库
 
@@ -65,12 +73,12 @@ SDK包含一键登录和本机号码校验两个不同的功能，使用场景�
 
 步骤：点击工程项目，点击目标TARGETS，选择Build Phases，展开Link Binary With Libraries，查看是否存在这四个文件）
 
-![framework.jpg](./imgs/linkBinaryFramework.jpg)
+![framework.jpg](./Document/imgs/linkBinaryFramework.jpg)
 
 
 
 如果没有，则需要手动添加（展开添加的SDK文件夹MobileSupportSDK，将其中的framework文件直接拖入即可）
-![手动链接RL一键登录库.jpg](./imgs/linkBinaryFramwByHand.jpg)
+![手动链接RL一键登录库.jpg](./Document/imgs/linkBinaryFramwByHand.jpg)
 
 #### （3）添加动态依赖库
 
@@ -78,14 +86,14 @@ SDK包含一键登录和本机号码校验两个不同的功能，使用场景�
 >
 >libc++.1.tbd
 
-![添加依赖库.jpg](./imgs/linkBinaryLib.jpg)
+![添加依赖库.jpg](./Document/imgs/linkBinaryLib.jpg)
 
 #### （4）添加资源文件
 
 添加Bundle文件夹下的几个bundle文件到工程里，否则⼀键登录授权⻚⾯默认的图⽚或icon将会显示不出来。
 
 步骤：点击工程项目，点击目标TARGETS，选择Build Phases，展开Copy Bundle Resources
-![资源文件.jpg](./imgs/bundleRes.jpg)
+![资源文件.jpg](./Document/imgs/bundleRes.jpg)
 
 #### （5）配置支持HTTP传输
 
@@ -108,18 +116,18 @@ SDK包含一键登录和本机号码校验两个不同的功能，使用场景�
 
 ​	最后更新配置文件即可使用
 
-![addSignWithAppleID](./imgs/addSignWithAppleID.png)
+![addSignWithAppleID](./Document/imgs/addSignWithAppleID.png)
 
 ### 1.3 编译配置
 
 **具体方法：**
 点击TARGETS(目标工程名)，点击“Build Settings”，搜索框内搜索Other Linker Flags，在“Other Linker Flags”选项后添加-ObjC，如果项目仍有问题，可以再添加-all_load。
 
-![动态库编译配置.jpg](./imgs/otherLinkerFlag.jpg)
+![动态库编译配置.jpg](./Document/imgs/otherLinkerFlag.jpg)
 
 
 
-# 四. SDK接口说明
+## 五. SDK接口说明
 
 ### 4.1 获取单例实例
 
@@ -554,7 +562,7 @@ SDK包含一键登录和本机号码校验两个不同的功能，使用场景�
 
 
 
-# 五. 授权页面设计
+## 六. 授权页面设计
 
 - ### <font color=red>登录按钮文字描述必须包含 “**登录**” 或 “**注册**” 等文字，不得诱导用户授权。</font>
 
@@ -947,9 +955,9 @@ SDK包含一键登录和本机号码校验两个不同的功能，使用场景�
 
 **界面说明**
 
-![界面参考](/Users/liuyizeng/Desktop/RLProject/onekeyLogin-Document-iOS/imgs/ScreenExplain.png)
+![界面参考](./Document/imgs/ScreenExplain.png)
 
-# 六. 常见问题
+## 七. 常见问题
 
 ##### 1. 出现 找不到方法的报错
 
@@ -1019,15 +1027,15 @@ b. 查找路径：targets -> Build Settings -> Other Linker Flags
 
 
 
-# 七. 状态码
+## 八. 状态码
 
 > <font color=red>000</font>xxx，<font color=red>11/12/13/59</font>xxxx
 >
-> 见 [容联状态码](./容联状态码.md)
+> 见 [容联状态码](./Document/容联状态码.md)
 
 
 
 > <font color=red>其他</font>，见
 >
-> [运营商状态码](./运营商状态码.md)
+> [运营商状态码](./Document/运营商状态码.md)
 
