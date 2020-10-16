@@ -43,11 +43,11 @@ SDK包含一键登录和本机号码校验两个不同的功能，使用场景�
 
 ## 四. 接入SDK的工作配置
 
-当前版本：1.0.3
+当前版本：1.0.6
 
 支持的iOS版本：9.0+
 
-SDK在主目录下的 **SDK** 文件夹中，解压后包含3个文件(夹)是：
+SDK在主目录下的 **SDK** 文件夹中，包含3个文件夹：
 
 - Bundle
 - MobileSupportSDK
@@ -65,7 +65,7 @@ SDK在主目录下的 **SDK** 文件夹中，解压后包含3个文件(夹)是�
 #### （1）引入文件
 
 步骤：将RLVerification文件夹（包含RLVerification.framework、MobileSupportSDK、Bundle三个子文件）拖入自己的项目目录里，弹出的窗口选择“Copy items if needed”，“Create groups”，“Add to targets”选择你的目标工程。
-![ChooseoptionsForAddingTheseFiles.jpg](https://github.com/cloopen/Images/blob/main/iOS/addingFiles.jpg)
+![ChooseoptionsForAddingTheseFiles.jpg](https://gitee.com/worldunknowme/Images/tree/main/iOS/addingFiles.jpg)
 
 #### （2）添加静态库
 
@@ -73,12 +73,12 @@ SDK在主目录下的 **SDK** 文件夹中，解压后包含3个文件(夹)是�
 
 步骤：点击工程项目，点击目标TARGETS，选择Build Phases，展开Link Binary With Libraries，查看是否存在这四个文件）
 
-![framework.jpg](https://github.com/cloopen/Images/blob/main/iOS/linkBinaryFramework.jpg)
+![framework.jpg](https://gitee.com/worldunknowme/Images/tree/main/iOS/linkBinaryFramework.jpg)
 
 
 
 如果没有，则需要手动添加（展开添加的SDK文件夹MobileSupportSDK，将其中的framework文件直接拖入即可）
-![手动链接RL一键登录库.jpg](https://github.com/cloopen/Images/blob/main/iOS/linkBinaryFramwByHand.jpg)
+![手动链接RL一键登录库.jpg](https://gitee.com/worldunknowme/Images/tree/main/iOS/linkBinaryFramwByHand.jpg)
 
 #### （3）添加动态依赖库
 
@@ -86,14 +86,14 @@ SDK在主目录下的 **SDK** 文件夹中，解压后包含3个文件(夹)是�
 >
 >libc++.1.tbd
 
-![添加依赖库.jpg](https://github.com/cloopen/Images/blob/main/iOS/linkBinaryLib.jpg)
+![添加依赖库.jpg](https://gitee.com/worldunknowme/Images/tree/main/iOS/linkBinaryLib.jpg)
 
 #### （4）添加资源文件
 
 添加Bundle文件夹下的几个bundle文件到工程里，否则⼀键登录授权⻚⾯默认的图⽚或icon将会显示不出来。
 
 步骤：点击工程项目，点击目标TARGETS，选择Build Phases，展开Copy Bundle Resources
-![资源文件.jpg](https://github.com/cloopen/Images/blob/main/iOS/bundleRes.jpg)
+![资源文件.jpg](https://gitee.com/worldunknowme/Images/tree/main/iOS/bundleRes.jpg)
 
 #### （5）配置支持HTTP传输
 
@@ -116,14 +116,14 @@ SDK在主目录下的 **SDK** 文件夹中，解压后包含3个文件(夹)是�
 
 ​	最后更新配置文件即可使用
 
-![addSignWithAppleID](https://github.com/cloopen/Images/blob/main/iOS/addSignWithAppleID.png)
+![addSignWithAppleID](https://gitee.com/worldunknowme/Images/tree/main/iOS/addSignWithAppleID.png)
 
 ### 1.3 编译配置
 
 **具体方法：**
 点击TARGETS(目标工程名)，点击“Build Settings”，搜索框内搜索Other Linker Flags，在“Other Linker Flags”选项后添加-ObjC，如果项目仍有问题，可以再添加-all_load。
 
-![动态库编译配置.jpg](https://github.com/cloopen/Images/blob/main/iOS/otherLinkerFlag.jpg)
+![动态库编译配置.jpg](https://gitee.com/worldunknowme/Images/tree/main/iOS/otherLinkerFlag.jpg)
 
 
 
@@ -564,15 +564,19 @@ SDK在主目录下的 **SDK** 文件夹中，解压后包含3个文件(夹)是�
 
 ## 六. 授权页面设计
 
-- ### <font color=red>登录按钮文字描述必须包含 “**登录**” 或 “**注册**” 等文字，不得诱导用户授权。</font>
+- #### <font color=red>登录按钮文字描述必须包含 “**登录**” 或 “**注册**” 等文字，不得诱导用户授权。</font>
 
-- ### <font color=red>开发者不得通过任何技术手段将授权页面的隐私协议栏、slogan隐藏或者覆盖。</font>
+- #### <font color=red>开发者不得通过任何技术手段将授权页面的隐私协议栏、slogan隐藏或者覆盖。</font>
 
-- ### <font color=red>对于接入容联一键登录SDK并上线的应用，我方会对上线的应用授权页面做审查，如果发现未按要求设计授权页面，将关闭应用的一键登录服务。</font>
+- #### <font color=red>对于接入容联一键登录SDK并上线的应用，我方会对上线的应用授权页面做审查，如果发现未按要求设计授权页面，将关闭应用的一键登录服务。</font>
 
 
 
-#### 需要在调起 一键登录全屏/弹窗 之前设置自定义UI
+### 界面说明
+
+![界面参考](https://gitee.com/worldunknowme/Images/tree/main/iOS/ScreenExplain.png)
+
+**需要在调起 一键登录全屏/弹窗 之前设置自定义UI**
 
 > // 初始化默认界面UI
 >
@@ -586,9 +590,7 @@ SDK在主目录下的 **SDK** 文件夹中，解压后包含3个文件(夹)是�
 
 
 
-#### 所有可配置参数如下（都在 RLUIConfig.h 中定义）
-
-
+### 所有可配置参数如下（都在 RLUIConfig.h 中定义）
 
 ##### Navigation/导航
 
@@ -639,7 +641,6 @@ SDK在主目录下的 **SDK** 文件夹中，解压后包含3个文件(夹)是�
 | logoOffsetY    | CGFloat  | LOGO图片相对于屏幕顶部的偏移量（下面的OffssetY同） | 40                 |
 | logoWidth      | CGFloat  | logo图片宽度                                       | 250                |
 | logoHeight     | CGFloat  | logo图片高度                                       | 50                 |
-| ~~logoHidden~~ | ~~BOOL~~ | ~~是否隐藏logo图片~~                               | ~~NO~~             |
 
 ```objective-c
 #pragma mark - Logo/图标
@@ -664,11 +665,6 @@ SDK在主目录下的 **SDK** 文件夹中，解压后包含3个文件(夹)是�
  默认：50
  */
 @property (nonatomic, assign) CGFloat logoHeight;
-/**
- Logo 图片隐藏
- 默认：NO，不隐藏
- */
-@property (nonatomic, assign) BOOL logoHidden;
 ```
 
 
@@ -952,10 +948,6 @@ SDK在主目录下的 **SDK** 文件夹中，解压后包含3个文件(夹)是�
 ```
 
 
-
-**界面说明**
-
-![界面参考](https://github.com/cloopen/Images/blob/main/iOS/ScreenExplain.png)
 
 ## 七. 常见问题
 
