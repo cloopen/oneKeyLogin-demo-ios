@@ -1108,17 +1108,3 @@ Authorization failed: Error Domain=AKAuthenticationError Code=-7003 "(null)" Use
 | 30002       | 无法识别用户网络         |
 | 51114       | 获取数据不存在           |
 
-
-
-## 八. 状态码
-
-> <font color=red>000</font>xxx，<font color=red>11/12/13/59</font>xxxx
->
-> 见 [容联状态码](./Document/容联状态码.md)
-
-
-
-> <font color=red>其他</font>，见
->
-> [运营商状态码](./Document/运营商状态码.md)
-
