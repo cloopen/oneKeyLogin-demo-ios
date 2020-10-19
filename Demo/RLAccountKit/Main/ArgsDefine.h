@@ -9,8 +9,8 @@
 #ifndef ArgsDefine_h_h
 #define ArgsDefine_h_h
 
-#define APPID @"8a216da858af3ac60158b33360d901ee"
-#define SERVER_PATH @"https://aim-mobileauth.yuntongxun.com"
+#define APPID @"<#appid#>"
+#define SERVER_PATH @"<#domain#>"
 
 
 #define zd_lastVersionKey @"lastInstallVersionKey"

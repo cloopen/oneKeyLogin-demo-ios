@@ -843,7 +843,7 @@
 				CODE_SIGN_ENTITLEMENTS = RLAccountKit/RLAccountKitDebug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4BW29X768A;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RLAccountKit/RLSDK/MobileSupportSDK/CTCC",
@@ -885,7 +885,7 @@
 					"-force_load",
 					"$(PROJECT_DIR)/RLVerification/RLVerification.framework/RLVerification",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ronglian.onekey.login;
+				PRODUCT_BUNDLE_IDENTIFIER = com.comp.project.name;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -899,7 +899,7 @@
 				CODE_SIGN_ENTITLEMENTS = RLAccountKit/RLAccountKitRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4BW29X768A;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RLAccountKit/MobileSupportSDK/CTCC",
@@ -944,7 +944,7 @@
 					"-force_load",
 					"$(PROJECT_DIR)/RLVerification/RLVerification.framework/RLVerification",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ronglian.onekey.login;
+				PRODUCT_BUNDLE_IDENTIFIER = com.comp.project.name;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
