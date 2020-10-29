@@ -30,6 +30,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.restorationIdentifier = NSStringFromClass(self.class);
     self.title = @"本机号码验证";
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -124,7 +125,7 @@
             NSLog(@"requestMobileVerify:%@", data);
             NSString *serCode = data[@"statusCode"];
             if (serCode.integerValue == 0) {
-                NSString * status = data[@"result"];
+                NSString *status = data[@"result"];
                 if ([status intValue] == 0) {
                     [weakSelf.successView updateVerifyResult:[status intValue]];
                     [weakSelf.view addSubview:weakSelf.successView];

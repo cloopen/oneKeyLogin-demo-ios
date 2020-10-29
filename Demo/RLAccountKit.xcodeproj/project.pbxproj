@@ -60,6 +60,8 @@
 		48E8177A249B3E3400362DAB /* uni_account_login_res.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 48E81772249B3E3400362DAB /* uni_account_login_res.bundle */; };
 		48E8177B249B3E3400362DAB /* EAccountOpenPageResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 48E81773249B3E3400362DAB /* EAccountOpenPageResource.bundle */; };
 		48E8177C249B3E3400362DAB /* RLVerification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 48E81774249B3E3400362DAB /* RLVerification.bundle */; };
+		8B07EA052519DE5900A34BF4 /* NSString+Validate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B07EA042519DE5900A34BF4 /* NSString+Validate.m */; };
+		8B571ECD2514651000E43FE7 /* RLPhoneVerifyLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B571ECC2514651000E43FE7 /* RLPhoneVerifyLoginVC.m */; };
 		8B83A2C624F8945200DB0082 /* ZDUserPwdLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B83A2C524F8945200DB0082 /* ZDUserPwdLoginVC.m */; };
 		8B83A2C924F8B24300DB0082 /* ZDStandbyListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B83A2C824F8B24200DB0082 /* ZDStandbyListVC.m */; };
 		8B83A2CC24F8D3AD00DB0082 /* ZDWebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B83A2CB24F8D3AD00DB0082 /* ZDWebViewVC.m */; };
@@ -167,6 +169,10 @@
 		48E81774249B3E3400362DAB /* RLVerification.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RLVerification.bundle; sourceTree = "<group>"; };
 		89A64E02A69BC209FF3CE13D /* Pods-RLAccountKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RLAccountKit.release.xcconfig"; path = "Target Support Files/Pods-RLAccountKit/Pods-RLAccountKit.release.xcconfig"; sourceTree = "<group>"; };
 		8B05A7BD2508C5E800B07457 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
+		8B07EA032519DE5900A34BF4 /* NSString+Validate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Validate.h"; sourceTree = "<group>"; };
+		8B07EA042519DE5900A34BF4 /* NSString+Validate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Validate.m"; sourceTree = "<group>"; };
+		8B571ECB2514651000E43FE7 /* RLPhoneVerifyLoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RLPhoneVerifyLoginVC.h; sourceTree = "<group>"; };
+		8B571ECC2514651000E43FE7 /* RLPhoneVerifyLoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RLPhoneVerifyLoginVC.m; sourceTree = "<group>"; };
 		8B83A2C424F8945200DB0082 /* ZDUserPwdLoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDUserPwdLoginVC.h; sourceTree = "<group>"; };
 		8B83A2C524F8945200DB0082 /* ZDUserPwdLoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDUserPwdLoginVC.m; sourceTree = "<group>"; };
 		8B83A2C724F8B24200DB0082 /* ZDStandbyListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDStandbyListVC.h; sourceTree = "<group>"; };
@@ -325,6 +331,8 @@
 				48111D5F248413470080D068 /* LoginViewController.m */,
 				48595EDF2485780300CECCBD /* LoginDebugViewController.h */,
 				48595EE02485780300CECCBD /* LoginDebugViewController.m */,
+				8B571ECB2514651000E43FE7 /* RLPhoneVerifyLoginVC.h */,
+				8B571ECC2514651000E43FE7 /* RLPhoneVerifyLoginVC.m */,
 				48111D60248413470080D068 /* LocalViewController.h */,
 				48111D5E248413470080D068 /* LocalViewController.m */,
 				481306D12496259B0079819E /* SuccessView.h */,
@@ -348,6 +356,8 @@
 				48111D6A248415510080D068 /* NSBundle+Get.m */,
 				48111D9E24841C750080D068 /* UIView+RL.h */,
 				48111D9F24841C750080D068 /* UIView+RL.m */,
+				8B07EA032519DE5900A34BF4 /* NSString+Validate.h */,
+				8B07EA042519DE5900A34BF4 /* NSString+Validate.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -679,6 +689,7 @@
 				48111D9424841B790080D068 /* BaseTransitionController.m in Sources */,
 				48111DA024841C750080D068 /* UIView+RL.m in Sources */,
 				48111D9324841B790080D068 /* DismissLogicalProcessing.m in Sources */,
+				8B571ECD2514651000E43FE7 /* RLPhoneVerifyLoginVC.m in Sources */,
 				48111D27248334250080D068 /* IQUITextFieldView+Additions.m in Sources */,
 				8B83A2C924F8B24300DB0082 /* ZDStandbyListVC.m in Sources */,
 				48111D29248334250080D068 /* IQUIView+Hierarchy.m in Sources */,
@@ -686,6 +697,7 @@
 				48111D62248413470080D068 /* LoginViewController.m in Sources */,
 				48111D9524841B790080D068 /* BaseDismissInteractor.m in Sources */,
 				48111D5024834C480080D068 /* UIImage+XYGif.m in Sources */,
+				8B07EA052519DE5900A34BF4 /* NSString+Validate.m in Sources */,
 				48111D4E24834C480080D068 /* XYIntroductionPage.m in Sources */,
 				48111D26248334250080D068 /* IQUIWindow+Hierarchy.m in Sources */,
 				48111D69248414870080D068 /* UIImage+RL.m in Sources */,
@@ -872,7 +884,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.6;
+				MARKETING_VERSION = 1.1.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -885,7 +897,7 @@
 					"-force_load",
 					"$(PROJECT_DIR)/RLVerification/RLVerification.framework/RLVerification",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.comp.project.name;
+				PRODUCT_BUNDLE_IDENTIFIER = com.compname.projname;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -931,7 +943,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.6;
+				MARKETING_VERSION = 1.1.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -944,7 +956,7 @@
 					"-force_load",
 					"$(PROJECT_DIR)/RLVerification/RLVerification.framework/RLVerification",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.comp.project.name;
+				PRODUCT_BUNDLE_IDENTIFIER = com.compname.projname;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.restorationIdentifier = NSStringFromClass(self.class);
 }
 
 #pragma mark - Orientation
@@ -45,4 +46,5 @@
     }
     return self.topViewController.preferredStatusBarStyle;
 }
+
 @end

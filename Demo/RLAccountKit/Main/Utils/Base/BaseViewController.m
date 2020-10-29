@@ -20,15 +20,12 @@ static inline CGFloat iosVersion(){
     static CGFloat iosV;
     static dispatch_once_t nameToken;
     dispatch_once(&nameToken, ^{
-        iosV = [[[UIDevice currentDevice] systemVersion] floatValue];
+        iosV = UIDevice.currentDevice.systemVersion.floatValue;
     });
     return iosV;
 }
 
-@interface BaseViewController ()<UIGestureRecognizerDelegate>
-{
-    
-}
+@interface BaseViewController () <UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) UITapGestureRecognizer *tapViewGesture;
 @property (nonatomic, strong) UIView *transparentNavigationBar;/**<透明导航栏时使用的NavigationBar*/
@@ -67,10 +64,8 @@ static inline CGFloat iosVersion(){
 //    NSValue *rectValue = [[notification userInfo] valueForKey:UIApplicationStatusBarFrameUserInfoKey];
 //    CGFloat height = [UIApplication sharedApplication].statusBarFrame.size.height;
 }
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
+- (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleDefault;
-//    return UIStatusBarStyleLightContent;
 }
 #pragma mark - 导航栏自定义
 -(void)setupCustomNavigationItem {

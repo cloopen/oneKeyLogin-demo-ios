@@ -9,11 +9,11 @@
 
 // In this header, you should import all the public headers of your framework using statements like #import <RLVerification/PublicHeader.h>
 #import "GlobalTools.h"
-#import "ZDDeviceTools.h"
-#import "ZDNetworkTools.h"
 #import "RLResultModel.h"
 #import "RLUIConfig.h"
+#import "ZDDeviceTools.h"
 #import "ZDNetworkState.h"
+#import "ZDNetworkTools.h"
 
 
 //! Project version number for RLVerification.
@@ -102,7 +102,7 @@ typedef void (^RLFailReason)(RLResult *result);
  * @param failReason    初始化失败的回调
  */
 - (void)setupWithAppID:(NSString *)appID
- withCompletionHandler:(void (^)(BOOL success))compHandler
+ withCompletionHandler:(void (^)(void))compHandler
             failReason:(RLFailReason)failReason;
 
 /** 删除本地的运营商配置信息 */

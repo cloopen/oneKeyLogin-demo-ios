@@ -135,6 +135,10 @@
 - (void)closeButtonTapped:(UIButton *)button {
     NSLog(@"closeButtonTapped");
     [self removeFromSuperview];
+    
+    if (self.closeBlock) {
+        self.closeBlock();
+    }
 }
 - (void)updateVerifyResult:(NSInteger)result {
     if (result == 0) {

@@ -36,9 +36,6 @@ NS_ASSUME_NONNULL_BEGIN
 /** 获取网络类型：如 3G，4G，WiFi ... */
 + (ZDNetworkType)zd_getNetworkType;
 
-/** 获取设备型号 */
-+ (NSString *)zd_getCurrentDeviceModel;
-
 /** 判断设备是否装有 SIM卡 */
 + (BOOL)zd_isSIMCardInstalled;
 

@@ -35,12 +35,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.restorationIdentifier = NSStringFromClass(self.class);
+    
     self.title = @"容联一键登录DEMO";
     self.view.backgroundColor = UIColor.whiteColor;
     
     [self initUI];
+    
+    [self setupIntroductionPage];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:YES];
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:NO];
+    [super viewDidDisappear:animated];
+}
 
 - (void)initUI {
     /// VIEW背景图片
@@ -124,8 +137,6 @@
         [self.view addSubview:loginBtn];
         [self.view addSubview:localBtn];
 //    }
-    
-    [self setupIntroductionPage];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
@@ -137,12 +148,14 @@
 
 - (void)goLoginController {
     LoginViewController *vc = [[LoginViewController alloc] init];
-    [self navigationToTargetViewController:vc animated:YES];
+    [self.navigationController pushViewController:vc animated:YES];
+//    [self navigationToTargetViewController:vc animated:YES];
 }
 
 - (void)goLocalController {
     LocalViewController *vc = [[LocalViewController alloc] init];
-    [self navigationToTargetViewController:vc animated:YES];
+    [self.navigationController pushViewController:vc animated:YES];
+//    [self navigationToTargetViewController:vc animated:YES];
 }
 
 - (void)clickNamePwdButton:(UIButton *)btn {

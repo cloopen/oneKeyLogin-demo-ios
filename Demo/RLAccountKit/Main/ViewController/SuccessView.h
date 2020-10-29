@@ -14,7 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, assign) BOOL isForLogin;
 
--(void)updateVerifyResult:(NSInteger)result;
+@property (nonatomic, copy) void (^closeBlock)();
+
+- (void)updateVerifyResult:(NSInteger)result;
 
 @end
 

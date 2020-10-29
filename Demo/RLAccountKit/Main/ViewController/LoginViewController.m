@@ -15,6 +15,7 @@
 #import "LoginDebugViewController.h"
 #import "SuccessView.h"
 #import "UIImage+RL.h"
+#import "RLPhoneVerifyLoginVC.h"
 
 #import <AuthenticationServices/AuthenticationServices.h>
 
@@ -32,13 +33,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.restorationIdentifier = NSStringFromClass(self.class);
+    
     self.title = @"一键登录";
     self.view.backgroundColor = [UIColor whiteColor];
         
     [self initUI];
-    RLVerification.sharedInstance.delegate = self;
     self.successView = [[SuccessView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
     self.successView.isForLogin = YES;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:NO];
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    RLVerification.sharedInstance.delegate = self;
 }
 
 - (void)initUI {
@@ -94,6 +107,17 @@
     [self.view addSubview:debugBtn];
     _debugBtn = debugBtn;
 }
+
+// MARK: - 状态保存和恢复 开始
+- (void)encodeRestorableStateWithCoder:(NSCoder *)coder {
+    [super encodeRestorableStateWithCoder:coder];
+}
+
+- (void)decodeRestorableStateWithCoder:(NSCoder *)coder {
+    [super decodeRestorableStateWithCoder:coder];
+}
+
+// MARK: - 状态保存和恢复 结束
 
 /// 一键登录全屏
 - (void)doFullScreen {
@@ -165,26 +189,12 @@
 
 - (void)doDebug {
     LoginDebugViewController *vc = [[LoginDebugViewController alloc]init];
-    [self navigationToTargetViewController:vc animated:YES];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 
 - (RLUIConfig *)setupCustomUI:(BOOL)ispopup {
-//    return [self testCustomUI:ispopup];
-    
     RLUIConfig *config = [[RLUIConfig alloc] init];
-//    config.naviBgColor = UIColor.redColor;
-//    config.thirdpartyHidden = YES;
-    if (ispopup) {
-        
-    } else {
-        config.logoOffsetY = 60;
-        config.numberOffsetY = 130;
-        config.sloganOffsetY = 200;
-        config.authButtonOffsetY = 300;
-        config.switchButtonOffsetY = 400;
-        config.privacyLabelBottomOffsetY = ispopup ? 0.f : 10.f;
-    }
     return config;
     
     /**
@@ -287,11 +297,13 @@
  */
 - (void)userDidSwitchAccount {
     NSLog(@"用户界面 userDidSwitchAccount");
-//    INIT_WEAK_SELF();
-//    [RLVerification.sharedInstance dismissLoginWithCompletion:^{
-//        [weakSelf tip:@"授权界面关闭完成"];
-//    }];
+    [RLVerification.sharedInstance dismissLoginWithCompletion:nil];
+    
+    RLPhoneVerifyLoginVC *pvVC = [[RLPhoneVerifyLoginVC alloc] init];
+    [self.navigationController pushViewController:pvVC animated:YES];
+//    [self navigationToTargetViewController:pvVC animated:YES];
 }
+
 /**
  一键登录 - 用户点击了授权页面的"第三方"按钮
  */

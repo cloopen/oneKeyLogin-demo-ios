@@ -27,6 +27,10 @@ typedef void (^DemoNetworkResponse)(NSDictionary *_Nullable networkResponse);
 // SDK获取到token即生成认证token任务,后面应该token传到自己服务器端访问容联服务进行登录or验证
 - (void)requestMobileVerify:(NSString *_Nullable)appId token:(NSString *)token mobile:(NSString *)mobile completion:(DemoNetworkResponse)completion;
 
+/// 获取验证码
+- (void)zd_sendVerifyCodeWithPhoneNumber:(NSString *)phone completion:(DemoNetworkResponse)completion;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

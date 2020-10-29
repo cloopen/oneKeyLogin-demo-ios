@@ -14,6 +14,7 @@
 
 #import "NetworkManager.h"
 #import "SuccessView.h"
+#import "RLPhoneVerifyLoginVC.h"
 
 @interface TopLeftLabel : UILabel
 
@@ -63,6 +64,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"一键登录/调试";
+    self.restorationIdentifier = NSStringFromClass(self.class);
+    
 //    self.edgesForExtendedLayout = UIRectEdgeNone;//不被导航栏挡住
     self.view.backgroundColor = [UIColor whiteColor];
     [self initUI];
@@ -211,8 +214,8 @@
     _logLabel.text = [NSString stringWithFormat:@"拉起授权页-全屏步骤:\n开始时间: %@.%lld",dateString,(((long long)(now*1000))%1000)];
     _logLabel.isWaitingLog = YES;
     
-//    RLUIConfig *config = [self setupCustomUI];
-//    [RLVerification sharedInstance].uiConfig = config;
+    RLUIConfig *config = [self setupCustomUI];
+    [RLVerification sharedInstance].uiConfig = config;
     //不添加 则使用默认配置
     [[RLVerification sharedInstance] registerDebugLogLabel:self.logLabel];
     [[RLVerification sharedInstance] doLogin:^(RLResultModel *rlResult) {
@@ -327,6 +330,11 @@
  */
 - (void)userDidSwitchAccount{
     NSLog(@"用户界面 userDidSwitchAccount");
+    
+    [RLVerification.sharedInstance dismissLoginWithCompletion:nil];
+    
+    RLPhoneVerifyLoginVC *pvVC = [[RLPhoneVerifyLoginVC alloc] init];
+    [self.navigationController pushViewController:pvVC animated:YES];
 }
 
 - (void)viewWillLayoutSubviews {

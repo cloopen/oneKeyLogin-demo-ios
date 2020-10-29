@@ -1,16 +1,16 @@
 //
-//  ArgsDefine.h.h
+//  ArgsDefine.h
 //  RLAccountKit
 //
 //  Created by Luan Chen on 2020/6/15.
 //  Copyright © 2020 ccop. All rights reserved.
 //
 
-#ifndef ArgsDefine_h_h
-#define ArgsDefine_h_h
+#ifndef ArgsDefine_h
+#define ArgsDefine_h
 
-#define APPID @"<#appid#>"
-#define SERVER_PATH @"<#domain#>"
+#define APPID @"<#AppID#>"
+#define SERVER_PATH @"<#domainURL#>"
 
 
 #define zd_lastVersionKey @"lastInstallVersionKey"
@@ -18,10 +18,10 @@
 #define zd_standbyLoginKey @"standbyModeLoginKey"
 
 
-#define kScreenWidth    [UIScreen mainScreen].bounds.size.width
-#define kScreenHeight   [UIScreen mainScreen].bounds.size.height
+#define kScreenWidth    UIScreen.mainScreen.bounds.size.width
+#define kScreenHeight   UIScreen.mainScreen.bounds.size.height
 
-#define kIs_iPhone      ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone)
+#define kIs_iPhone      (UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPhone)
 #define kIs_iPhoneX     (kScreenWidth >= 375.0f && kScreenHeight >= 812.0f && kIs_iPhone)
  
 /*状态栏高度*/
@@ -71,4 +71,4 @@
 #define zd_udSync [zd_userDefault synchronize]
 
 
-#endif /* ArgsDefine_h_h */
+#endif /* ArgsDefine_h */
