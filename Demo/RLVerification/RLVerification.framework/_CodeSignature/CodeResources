@@ -102,11 +102,11 @@
 		</data>
 		<key>Headers/RLVerification.h</key>
 		<data>
-		/dGqzUWJBJs56ff/3EE6CLOmbPs=
+		xrlF3LsJ7VByuA4YKlCeBXSavAQ=
 		</data>
 		<key>Headers/ZDDeviceTools.h</key>
 		<data>
-		/XlT3OJH1d1EHr6IssXWf4vWA3g=
+		GJsM0zsKHDmPv2AayiqPkF6nTzM=
 		</data>
 		<key>Headers/ZDNetworkState.h</key>
 		<data>
@@ -114,11 +114,11 @@
 		</data>
 		<key>Headers/ZDNetworkTools.h</key>
 		<data>
-		qc1NYa9QhiNZkFZeXb7jBiZBNaY=
+		c4bRBcmWrlNeISkkpc7RLZ6zwTM=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		I59Efer92gXO0n/k9KDgtrtcdi4=
+		F5D3aOaE2cn7Rng6pEY6PnhBAxs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -491,22 +491,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/dGqzUWJBJs56ff/3EE6CLOmbPs=
+			xrlF3LsJ7VByuA4YKlCeBXSavAQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZZt94m4TJ0SeTmeSLPKMOeZMal+JlZFQ4wGQoWHIr4I=
+			sfkHv4haZG2v5dQBFQzRnwBsVmzrUVQB+j/1fGE1E6M=
 			</data>
 		</dict>
 		<key>Headers/ZDDeviceTools.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/XlT3OJH1d1EHr6IssXWf4vWA3g=
+			GJsM0zsKHDmPv2AayiqPkF6nTzM=
 			</data>
 			<key>hash2</key>
 			<data>
-			zcA7bqphplIwIVsGnmFss9kL76MFyO3QGgCBopDv5dk=
+			3a07ls+sZOzSaBReiT7vu5icO8hmehWaAS9cuhhBlrY=
 			</data>
 		</dict>
 		<key>Headers/ZDNetworkState.h</key>
@@ -524,11 +524,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			qc1NYa9QhiNZkFZeXb7jBiZBNaY=
+			c4bRBcmWrlNeISkkpc7RLZ6zwTM=
 			</data>
 			<key>hash2</key>
 			<data>
-			+MS80AmKi0gspRstLMJZZJTUr+KTmqBt0FDwqNaAy64=
+			Dn2FDIHNdDpm80kfnz9Pk50jzJQA4L0MuOSwG/OZj80=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
